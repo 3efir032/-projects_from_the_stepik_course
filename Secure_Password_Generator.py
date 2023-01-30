@@ -1,4 +1,4 @@
-"""Программа для генерации паролей по выбранным параметрам пользователей."""
+"""Программа для генерации паролей по выбранным параметрам пользователя."""
 
 from random import choice
 from string import digits, ascii_lowercase, ascii_uppercase, punctuation
