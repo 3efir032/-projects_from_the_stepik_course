@@ -41,15 +41,15 @@ def pre_setting_passwords():
 def setting_the_number_of_passwords_and_character_selection():
     """Функция генерации списка случайных символов по выбранным параметрам пользователя."""
     pre_setting_password = pre_setting_passwords()
-    list_variables = [DIGITS, UPPERCASE_LETTERS, LOWERCASE_LETTERS, PUNCTUATION, AMBIGUOUS_CHARACTERS]
+    variables = [DIGITS, UPPERCASE_LETTERS, LOWERCASE_LETTERS, PUNCTUATION, AMBIGUOUS_CHARACTERS]
     characters_for_the_password = ''
     for index, passwords in enumerate(pre_setting_password[2:-1]):
-        if int(pre_setting_password[1]) > len(list_variables[index]) and passwords == '+':
-            num = math.ceil(int(pre_setting_password[1]) / len(list_variables[index]))
-            characters_for_the_password += list_variables[index] * num
+        if int(pre_setting_password[1]) > len(variables[index]) and passwords == '+':
+            num = math.ceil(int(pre_setting_password[1]) / len(variables[index]))
+            characters_for_the_password += variables[index] * num
 
         elif passwords == '+':
-            characters_for_the_password += list_variables[index]
+            characters_for_the_password += variables[index]
 
     if pre_setting_password[-1] == '+':
         characters_for_the_password = characters_for_the_password.translate(
