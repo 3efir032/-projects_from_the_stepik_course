@@ -27,8 +27,19 @@ def encrypted_message(message):
                 encrypted = ord(value)
             encrypted_text += chr(encrypted)
 
-    print(encrypted_text)
+    return encrypted_text
+
+
+def main():
+    """Start program"""
+    flag = True
+    while flag:
+        text = input('Введите сообщение: ')
+        print(f'Зашифрованное сообщение: {encrypted_message(text)}\n')
+        print('****Для выхода напишите "exit или выход"****\n')
+        if text.startswith('exit') or text.startswith('выход'):
+            flag = False
 
 
 if __name__ == '__main__':
-    encrypted_message(input('Введите сообщение: '))
+    main()
